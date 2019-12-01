@@ -136,6 +136,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # 释放摄像头
         if hasattr(self, 'cap'):
             self.cap.release()
+            del self.cap
 
         self.pushButton_start.setEnabled(True)
 
